@@ -8,11 +8,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './modules/wheater/page/home/home.component';
+import { WeatherCardComponent } from './modules/wheater/components/weather-card/weather-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    WeatherCardComponent
   ],
   imports: [
     BrowserModule,
