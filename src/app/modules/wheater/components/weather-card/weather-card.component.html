@@ -10,7 +10,7 @@
   </div>
   <div class="lower-data">
     <div class="more-info-label"> Mais Informações</div>
-
+ 
     <div class="more-info-container">
       <div class="info-block">
         <div class="info-block-label">
@@ -19,9 +19,31 @@
         </div>
 
         <div class="info-block-value">
-          {{WeatherDatasInput.main.temp_min}}
+          {{WeatherDatasInput.main.temp_min | number: "1.0-0"}}ºC
         </div>
       </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="maxTemperatureIcon"></fa-icon>
+          <span>Máxima</span>
+        </div>
+        <div class="info-block-value">{{WeatherDatasInput.main.temp_max | number: "1.0-0"}}ºC</div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="humidityIcon"></fa-icon>
+          <span>Humidade</span>
+        </div>
+        <div class="info-block-value"> {{WeatherDatasInput.main.humidity}}% </div>
+      </div>
+      <div class="info-block">
+        <div class="info-block-label">
+          <fa-icon size="lg" [icon]="windIcon"></fa-icon>
+          <span>Vento</span>
+        </div>
+        <div class="info-block-value"> {{WeatherDatasInput.wind.speed}}km/h </div>
+      </div>
+
     </div>
   </div>
 </div>
